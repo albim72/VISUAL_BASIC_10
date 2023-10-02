@@ -26,6 +26,24 @@ Module Module1
             Console.WriteLine(miasta(j))
         Next
 
+        Console.WriteLine("__________________________________________")
+
+        Dim citynumS As String
+        Dim citynum As Long
+        Dim cities() As String
+
+
+        citynumS = InputBox("ile miast chcesz wpisać? ")
+        citynum = citynumS
+
+        ReDim cities(citynum)
+        For i = 0 To citynum - 1
+            cities(i) = InputBox("podaj nazwę miasta: ")
+        Next
+        Console.WriteLine("__________________________________________")
+        For Each ct In cities
+            Console.WriteLine(ct)
+        Next
 
 
 
