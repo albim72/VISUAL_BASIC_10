@@ -19,7 +19,8 @@ Public Class Osoba
     End Sub
 
     Public Function printOsoba()
-        Console.WriteLine("osoba: {0} {1}, wiek: {2}, stanowisko pracy: {3}, wzrost {4} cm, waga: {5} kg.")
+        Console.WriteLine("osoba: {0} {1}, wiek: {2}, stanowisko pracy: {3}, wzrost {4} cm, waga: {5} kg.",
+imie, nazwisko, wiek, stanowisko, wzrost, waga)
         Console.ReadKey()
     End Function
 
