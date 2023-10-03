@@ -3,15 +3,15 @@ Public Class Box
     Private height As Double
     Private breadth As Double
 
-    Private Sub setLength(len As Double)
+    Public Sub setLength(len As Double)
         length = len
     End Sub
 
-    Private Sub setHeight(hei As Double)
+    Public Sub setHeight(hei As Double)
         height = hei
     End Sub
 
-    Private Sub setBreadth(bre As Double)
+    Public Sub setBreadth(bre As Double)
         breadth = bre
     End Sub
 
