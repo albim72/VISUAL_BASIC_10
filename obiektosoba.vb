@@ -10,6 +10,15 @@ Module Module1
         Console.WriteLine(osoba1.koloroczu)
         Console.WriteLine(osoba2.koloroczu)
 
+
+        Dim stud As Student = New Student("Olga", "Nowak", 22, "praktykantka",
+                                          168, 56, "HG345435345", "Ekonomia", True)
+
+        stud.printOsoba()
+        Console.WriteLine(stud.koloroczu)
+        stud.printStudent()
+
+
         Console.ReadKey()
 
 
