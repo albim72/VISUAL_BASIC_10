@@ -15,7 +15,16 @@ Module Module1
 
         cars.Sort()
 
-        For Each
+        For Each thisCar As Car In cars
+            Console.Write(thisCar.Color.PadRight(5) & "  ")
+            Console.Write(thisCar.Speed.ToString & "  ")
+            Console.Write(thisCar.Name)
+            Console.WriteLine()
+
+        Next
+
+        Console.ReadKey()
+
 
 
     End Sub
