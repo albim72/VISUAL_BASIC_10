@@ -95,6 +95,8 @@ Public Class Form1
         lbOdbior.SelectedItem = "dowóz"
 
         rtbZam.ResetText()
+        btnKwota.Enabled = True
+        btnZam.Enabled = True
 
     End Sub
 End Class
