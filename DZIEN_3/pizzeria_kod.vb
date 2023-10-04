@@ -39,4 +39,43 @@ Public Class Form1
         msRozm = "duża pizza"
         mdCena = 34
     End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        lbGodzina.SelectedItem() = "18:00"
+        dodatki = New List(Of CheckBox) From
+            {cbPep, cbCeb, cbSer, cbSzy, cbPie, cbPom, cbTun, cbCzo}
+        rbMala.Checked = True
+        rbCienkie.Checked = True
+        lbOdbior.SelectedItem = "dowóz"
+
+    End Sub
+
+    Private Sub btnZam_Click(sender As Object, e As EventArgs) Handles btnZam.Click
+        rtbZam.AppendText("Zamówienie pizzy: " & ControlChars.Tab &
+                          "rozmiar pizzy: " & msRozm.PadRight(12) & vbNewLine)
+        rtbZam.AppendText("Cena pizzy: " & mdCena & vbNewLine)
+        rtbZam.AppendText("Grubość ciasta: " & mdCiasto & vbNewLine)
+
+        TotalCena += mdCena
+
+        Dim str = ""
+        For Each dod As CheckBox In dodatki
+            If dod.Checked = True Then
+                str &= dod.Text & ", "
+            End If
+        Next
+
+        If str <> Nothing Then
+            rtbZam.AppendText("Dodatki: " & str & vbNewLine)
+        End If
+
+        rtbZam.AppendText("Godzina dostawy: " & lbGodzina.Text & vbNewLine)
+        rtbZam.AppendText("Odbiór zamówienia: " & lbOdbior.Text & vbNewLine)
+
+
+    End Sub
+
+    Private Sub btnKwota_Click(sender As Object, e As EventArgs) Handles btnKwota.Click
+
+    End Sub
 End Class
