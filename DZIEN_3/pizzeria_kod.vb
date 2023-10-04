@@ -76,6 +76,25 @@ Public Class Form1
     End Sub
 
     Private Sub btnKwota_Click(sender As Object, e As EventArgs) Handles btnKwota.Click
+        rtbZam.AppendText("Wartość całkowita zamówienia: " & TotalCena & " zł" & vbNewLine)
+        rtbZam.AppendText("Dziękujemy za zamówienie!")
+        rtbZam.Enabled = True
+        btnKwota.Enabled = False
+        btnZam.Enabled = False
+    End Sub
+
+    Private Sub btnReset_Click(sender As Object, e As EventArgs) Handles btnReset.Click
+        For Each dod As CheckBox In dodatki
+            dod.Checked = False
+        Next
+        lbGodzina.SelectedItem() = "18:00"
+        dodatki = New List(Of CheckBox) From
+            {cbPep, cbCeb, cbSer, cbSzy, cbPie, cbPom, cbTun, cbCzo}
+        rbMala.Checked = True
+        rbCienkie.Checked = True
+        lbOdbior.SelectedItem = "dowóz"
+
+        rtbZam.ResetText()
 
     End Sub
 End Class
