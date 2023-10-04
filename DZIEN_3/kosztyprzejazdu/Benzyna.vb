@@ -1,7 +1,7 @@
 Public Class Benzyna : Inherits Auto
 
-    Public Sub New(odleglosc As Double, jednostki As Double, cenaj As Double)
-        MyBase.New(odleglosc, jednostki, cenaj)
+    Public Sub New(odleglosc As Double, cenaj As Double)
+        MyBase.New(odleglosc, cenaj)
     End Sub
 
     Dim avg_jedn As Double = 32
