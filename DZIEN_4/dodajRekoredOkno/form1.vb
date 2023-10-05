@@ -31,4 +31,17 @@ Public Class Form1
         tbCena.Clear()
 
     End Sub
+
+    Private Sub btnPokaz_Click(sender As Object, e As EventArgs) Handles btnPokaz.Click
+        Dim idf = InputBox("Podaj ID rekordu....", "ID")
+        Dim printDane As Produkty =
+            db.Produkty.FirstOrDefault(Function(h) h.IDProduktu.Equals(idf))
+
+        tbWynik.Text = "ID Produktu = " & printDane.IDProduktu & vbNewLine &
+                        "Nazwa Produktu" & printDane.NazwaProduktu & vbNewLine &
+                        "Cena Produktu" & printDane.CenaJednostkowa & vbNewLine &
+                        "Kod kategorii produktu" & printDane.IDKategorii
+
+
+    End Sub
 End Class
