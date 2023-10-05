@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<family>
+	<name gender ="M">
+		<firstname>Tomasz</firstname>
+		<lastname>Kos</lastname>
+		<age>45</age>
+	</name>
+	<name gender ="K">
+		<firstname>Olga</firstname>
+		<lastname>Nowak</lastname>
+		<age>33</age>
+	</name>
+	<name gender ="M">
+		<firstname>Jacek</firstname>
+		<lastname>Kowal</lastname>
+		<age>50</age>
+	</name>
+	<name gender ="K">
+		<firstname>Nina</firstname>
+		<lastname>Kuś</lastname>
+		<age>24</age>
+	</name>
+</family>
